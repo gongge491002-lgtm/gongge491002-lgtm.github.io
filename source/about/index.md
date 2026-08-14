@@ -16,5 +16,5 @@ title: 关于本站
 
 ## 联系
 
-- 邮箱：admin@example.com
+- 邮箱：revolution-marxleninmaoist-wiki@tutanota.com
 - 反馈问题请附上大致时间与复现步骤
