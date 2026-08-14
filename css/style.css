@@ -516,6 +516,16 @@ svg {
   color: var(--md-on-surface-variant);
 }
 
+.status-link {
+  font-size: 13.5px;
+  color: var(--md-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+
+.status-link:hover { opacity: 0.85; }
+
 .status-updated {
   margin-left: auto;
   font-size: 12px;
