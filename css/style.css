@@ -1118,7 +1118,19 @@ svg {
   padding: 8px 0 24px;
 }
 
-.tag-chip { padding: 0 16px; }
+.tag-chip {
+  padding: 0 16px;
+  transition: background 0.2s var(--md-motion-standard),
+              border-color 0.2s var(--md-motion-standard),
+              color 0.2s var(--md-motion-standard),
+              transform 0.2s var(--md-motion-emphasized),
+              box-shadow 0.2s var(--md-motion-emphasized);
+}
+
+.tag-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--md-elevation-1);
+}
 
 .tag-count {
   font-size: 0.78em;
@@ -1126,6 +1138,7 @@ svg {
   background: var(--md-surface-container-high);
   border-radius: var(--md-shape-full);
   padding: 1px 8px;
+  transition: background 0.2s var(--md-motion-standard), color 0.2s var(--md-motion-standard), opacity 0.2s var(--md-motion-standard);
 }
 
 .tag-chip:hover .tag-count { background: var(--md-on-primary-container); color: var(--md-primary-container); }
