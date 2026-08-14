@@ -13,7 +13,7 @@
       var p = page.path || '';
       var active = (link === '/' && (p === '' || p === 'index.html')) || (link !== '/' && (p === link.slice(1) || p.indexOf(link.slice(1)) === 0));
     %>
-      <a class="nav-drawer-item<%= active ? ' active' : '' %>" href="<%- url_for(link) %>">
+      <a class="nav-drawer-item<%= active ? ' active' : '' %>" href="<%- url_for(link) %>"<%= /^https?:\/\//.test(link) ? ' target="_blank" rel="noopener"' : '' %>>
         <span class="nav-drawer-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>

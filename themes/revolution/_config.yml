@@ -20,6 +20,7 @@ menu:
   标签: /tags/
   分类: /categories/
   关于: /about/
+  主站: https://wiki.gongge491001.org
 
 # 主题色（MD3 主色，十六进制）
 # 默认为革命红 #B3261E
@@ -57,7 +58,6 @@ status:
   level: operational
   title: 正常
   message: 维基项目运作良好
-  url: https://wiki.gongge491001.org
   updated: 2026-08-14 23:20
 
 # 页脚

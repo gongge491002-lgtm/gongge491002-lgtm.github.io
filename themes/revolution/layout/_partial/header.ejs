@@ -18,7 +18,7 @@
         var p = page.path || '';
         var active = (link === '/' && (p === '' || p === 'index.html')) || (link !== '/' && (p === link.slice(1) || p.indexOf(link.slice(1)) === 0));
       %>
-        <a class="nav-item<%= active ? ' active' : '' %>" href="<%- url_for(link) %>"><%= name %></a>
+        <a class="nav-item<%= active ? ' active' : '' %>" href="<%- url_for(link) %>"<%= /^https?:\/\//.test(link) ? ' target="_blank" rel="noopener"' : '' %>><%= name %></a>
       <% }); %>
     </nav>
 
