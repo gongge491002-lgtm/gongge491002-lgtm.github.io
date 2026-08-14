@@ -56,8 +56,9 @@ status:
   enabled: true
   level: operational
   title: 正常
-  message: 主站服务已恢复正常，感谢您的耐心等待与支持。
-  updated: 2026-08-14 23:15
+  message: 维基项目运作良好
+  url: https://wiki.gongge491001.org
+  updated: 2026-08-14 23:20
 
 # 页脚
 footer:

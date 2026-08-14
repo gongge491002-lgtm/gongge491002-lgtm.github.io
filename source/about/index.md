@@ -12,7 +12,7 @@ title: 关于本站
 
 ## 主站
 
-- 革命马列毛维基：https://wiki.example.com（待配置）
+- 革命马列毛维基：https://wiki.gongge491001.org
 
 ## 联系
 
