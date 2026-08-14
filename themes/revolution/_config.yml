@@ -71,9 +71,5 @@ footer:
     Hexo: https://hexo.io/
     MD3: https://m3.material.io/
 
-# 社交链接（显示在页脚与抽屉导航，名称: 链接）
-social:
-  GitHub: https://github.com/
-
 # 每页文章数（0 表示使用 Hexo 默认）
 per_page: 0
