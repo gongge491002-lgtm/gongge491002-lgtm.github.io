@@ -1366,3 +1366,38 @@ svg {
   }
   html { scroll-behavior: auto; }
 }
+
+/* ---------- 16. 跨页面转场动画（View Transitions，MPA 平滑跳转） ---------- */
+/* 点击标签、导航、文章链接等站内跳转时平滑过渡；Firefox 暂不支持则保持原跳转 */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  /* 顶部应用栏在页面切换时保持稳定，避免整页淡入淡出造成“双重标题”闪烁 */
+  .top-app-bar {
+    view-transition-name: app-bar;
+  }
+
+  ::view-transition-old(root) {
+    animation: vt-page-out 0.24s var(--md-motion-emphasized-decelerate) both;
+  }
+
+  ::view-transition-new(root) {
+    animation: vt-page-in 0.24s var(--md-motion-emphasized-decelerate) both;
+  }
+}
+
+@keyframes vt-page-out {
+  to {
+    opacity: 0;
+    transform: scale(0.99);
+  }
+}
+
+@keyframes vt-page-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
