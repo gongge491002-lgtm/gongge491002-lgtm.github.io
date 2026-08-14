@@ -1,0 +1,31 @@
+<div class="scrim" id="nav-scrim" hidden></div>
+<aside class="nav-drawer" id="nav-drawer" aria-label="侧边导航" aria-hidden="true">
+  <div class="nav-drawer-header">
+    <img class="brand-logo" src="<%- url_for(theme.logo) %>" alt="" aria-hidden="true">
+    <span class="brand-text">
+      <span class="brand-name"><%= theme.brand.name || config.title %></span>
+      <% if (theme.brand.suffix){ %><span class="brand-suffix"><%= theme.brand.suffix %></span><% } %>
+    </span>
+  </div>
+  <nav class="nav-drawer-list">
+    <% Object.keys(theme.menu).forEach(function(name){
+      var link = theme.menu[name];
+      var p = page.path || '';
+      var active = (link === '/' && (p === '' || p === 'index.html')) || (link !== '/' && (p === link.slice(1) || p.indexOf(link.slice(1)) === 0));
+    %>
+      <a class="nav-drawer-item<%= active ? ' active' : '' %>" href="<%- url_for(link) %>">
+        <span class="nav-drawer-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <%= name %>
+      </a>
+    <% }); %>
+  </nav>
+  <% if (theme.social && Object.keys(theme.social).length){ %>
+    <div class="nav-drawer-footer">
+      <% Object.keys(theme.social).forEach(function(name){ %>
+        <a class="social-link" href="<%- theme.social[name] %>" target="_blank" rel="noopener"><%= name %></a>
+      <% }); %>
+    </div>
+  <% } %>
+</aside>

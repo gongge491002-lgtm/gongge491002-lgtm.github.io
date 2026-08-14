@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="page-heading">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m4 14V9m4 10v-6m4 6V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    归档
+  </h1>
+
+  <div class="archive-list">
+    <% var yearGroups = {};
+       var posts = page.posts.toArray ? page.posts.toArray() : page.posts;
+       for (const post of posts) {
+         var y = String(post.date.year());
+         (yearGroups[y] = yearGroups[y] || []).push(post);
+       }
+       var years = Object.keys(yearGroups).sort(function(a, b){ return Number(b) - Number(a); });
+       for (const y of years) { %>
+      <section class="archive-year">
+        <h2 class="archive-year-title"><%= y %></h2>
+        <ul class="archive-items">
+          <% yearGroups[y].forEach(function(post){ %>
+            <li class="archive-item">
+              <time class="archive-item-date" datetime="<%- date_xml(post.date) %>"><%= date(post.date, 'M月D日') %></time>
+              <a class="archive-item-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+            </li>
+          <% }); %>
+        </ul>
+      </section>
+    <% } %>
+  </div>
+
+  <%- partial('_partial/pagination') %>
+</div>

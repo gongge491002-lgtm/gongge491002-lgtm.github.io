@@ -1,0 +1,78 @@
+# -------------------------------------------------------------
+# 革命 · Revolution
+# 左翼红色风格 · Material Design 3 主题配置
+# -------------------------------------------------------------
+
+# 品牌标识
+# 顶栏显示名称，留空则使用根配置的 config.title
+brand:
+  name: 革命马列毛维基博客
+  suffix: 状态与更新
+
+# 图标（主题 source 目录下的相对路径）
+logo: images/wiki.svg
+favicon: images/wiki.svg
+
+# 导航菜单（名称: 链接）
+menu:
+  首页: /
+  归档: /archives/
+  标签: /tags/
+  分类: /categories/
+  关于: /about/
+
+# 主题色（MD3 主色，十六进制）
+# 默认为革命红 #B3261E
+primary_color: "#B3261E"
+
+# 暗色模式：auto（跟随系统）/ light / dark
+darkmode: auto
+
+# 首页
+index:
+  # 摘要模式：excerpt 使用文章 <!-- more --> 截断；auto 自动截断
+  excerpt: auto
+  # 自动截断字符数
+  excerpt_length: 160
+  # 显示文章日期
+  show_date: true
+
+# 文章页
+post:
+  # 是否显示目录（TOC）
+  toc: true
+  # 上一篇 / 下一篇导航
+  prev_next: true
+  # 显示作者（需在文章 front-matter 中设置 author）
+  show_author: true
+
+# 归档页按年份分组
+archive:
+  group_by_year: true
+
+# 服务状态横幅（首页顶部）
+# level: operational（正常）/ maintenance（维护中）/ degraded（部分故障）/ down（故障）
+status:
+  enabled: true
+  level: down
+  title: 故障
+  message: 主站服务异常，技术团队正在紧急排查修复中，给您带来不便敬请谅解。
+  updated: 2026-08-14 20:09
+
+# 页脚
+footer:
+  # 建站年份，用于 "© 2026 - 2027"
+  since: 2026
+  # 页脚标语
+  slogan: 全世界无产者，联合起来！
+  # 友情链接（名称: 链接）
+  links:
+    Hexo: https://hexo.io/
+    MD3: https://m3.material.io/
+
+# 社交链接（显示在页脚与抽屉导航，名称: 链接）
+social:
+  GitHub: https://github.com/
+
+# 每页文章数（0 表示使用 Hexo 默认）
+per_page: 0

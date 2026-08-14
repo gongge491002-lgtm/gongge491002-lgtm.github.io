@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>" data-theme="light">
+<%- partial('_partial/head') %>
+<body>
+  <%- partial('_partial/header') %>
+
+  <!-- 移动端导航抽屉 -->
+  <%- partial('_partial/nav-drawer') %>
+
+  <main class="app-content" id="main-content">
+    <%- body %>
+  </main>
+
+  <%- partial('_partial/footer') %>
+
+  <!-- 返回顶部 FAB -->
+  <button class="fab" id="fab-top" aria-label="返回顶部" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 20V4M5 11l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <%- js('js/main.js') %>
+</body>
+</html>

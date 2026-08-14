@@ -1,0 +1,46 @@
+<article class="card post-card">
+  <div class="card-content">
+    <div class="post-meta">
+      <% if (theme.index.show_date !== false){ %>
+        <time class="meta-item" datetime="<%- date_xml(post.date) %>">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 7v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7M7 7V4m10 3V4M8 12h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <%= date(post.date, 'YYYY年M月D日') %>
+        </time>
+      <% } %>
+      <% if (post.categories && post.categories.length){ %>
+        <% post.categories.forEach(function(cat){ %>
+          <a class="meta-item meta-link" href="<%- url_for(cat.path) %>">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            <%= cat.name %>
+          </a>
+        <% }); %>
+      <% } %>
+    </div>
+
+    <h2 class="card-title">
+      <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+    </h2>
+
+    <div class="card-excerpt">
+      <% if (post.excerpt){ %>
+        <%- post.excerpt %>
+      <% } else if (theme.index.excerpt !== 'excerpt'){ %>
+        <p><%= truncate(strip_html(post.content), {length: theme.index.excerpt_length || 160}) %></p>
+      <% } %>
+    </div>
+
+    <div class="card-actions">
+      <a class="button button-text" href="<%- url_for(post.path) %>">
+        阅读全文
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <% if (post.tags && post.tags.length){ %>
+        <div class="chip-row">
+          <% post.tags.slice(0, 4).forEach(function(tag){ %>
+            <a class="chip" href="<%- url_for(tag.path) %>"><%= tag.name %></a>
+          <% }); %>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</article>

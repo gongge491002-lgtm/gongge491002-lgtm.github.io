@@ -1,0 +1,21 @@
+<footer class="app-footer">
+  <div class="footer-inner">
+    <% if (theme.footer.slogan){ %>
+      <p class="footer-slogan">「<%= theme.footer.slogan %>」</p>
+    <% } %>
+    <p class="footer-copyright">
+      © <%= theme.footer.since %>
+      <% var currentYear = new Date().getFullYear(); %>
+      <% if (theme.footer.since != currentYear){ %> - <%= currentYear %><% } %>
+      <a href="<%- url_for('/') %>"><%= config.title %></a>
+      · 由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动 · Revolution 主题
+    </p>
+    <% if (theme.footer.links && Object.keys(theme.footer.links).length){ %>
+      <p class="footer-links">
+        <% Object.keys(theme.footer.links).forEach(function(name){ %>
+          <a href="<%- theme.footer.links[name] %>" target="_blank" rel="noopener"><%= name %></a>
+        <% }); %>
+      </p>
+    <% } %>
+  </div>
+</footer>

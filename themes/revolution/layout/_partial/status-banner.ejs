@@ -1,0 +1,10 @@
+<% if (theme.status && theme.status.enabled){ %>
+<div class="status-banner level-<%= theme.status.level || 'operational' %>" role="status">
+  <span class="status-dot" aria-hidden="true"></span>
+  <div class="status-text">
+    <span class="status-title"><%= theme.status.title || '服务正常' %></span>
+    <% if (theme.status.message){ %><span class="status-message"><%= theme.status.message %></span><% } %>
+  </div>
+  <% if (theme.status.updated){ %><span class="status-updated">更新于 <%= theme.status.updated %></span><% } %>
+</div>
+<% } %>

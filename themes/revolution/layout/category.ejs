@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="page-heading">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    分类
+  </h1>
+
+  <div class="category-list">
+    <% var cats = site.categories.toArray().sort(function(a, b){ return b.length - a.length; });
+       for (const cat of cats) { %>
+      <a class="card category-card" href="<%- url_for(cat.path) %>">
+        <span class="category-card-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="category-card-name"><%= cat.name %></span>
+        <span class="category-card-count"><%= cat.length %> 篇</span>
+      </a>
+    <% } %>
+  </div>
+</div>

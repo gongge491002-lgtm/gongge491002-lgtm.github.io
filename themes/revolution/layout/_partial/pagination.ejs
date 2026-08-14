@@ -1,0 +1,23 @@
+<% if (page.total > 1){ %>
+<nav class="pagination" aria-label="分页导航">
+  <% if (page.prev){ %>
+    <a class="pagination-button" href="<%- url_for(page.prev_link) %>" aria-label="上一页">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6 6-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      上一页
+    </a>
+  <% } else { %>
+    <span class="pagination-button disabled" aria-disabled="true">上一页</span>
+  <% } %>
+
+  <span class="pagination-info"><%= page.current %> / <%= page.total %></span>
+
+  <% if (page.next){ %>
+    <a class="pagination-button" href="<%- url_for(page.next_link) %>" aria-label="下一页">
+      下一页
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  <% } else { %>
+    <span class="pagination-button disabled" aria-disabled="true">下一页</span>
+  <% } %>
+</nav>
+<% } %>
