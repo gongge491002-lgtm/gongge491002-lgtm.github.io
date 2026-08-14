@@ -813,6 +813,9 @@ svg {
 
 .post-article { padding: 32px 36px; }
 
+/* 独立页面（如“关于本站”）卡片与顶部应用栏之间留出间距 */
+.page-article { margin-top: 28px; }
+
 .post-header {
   margin-bottom: 28px;
   padding-bottom: 24px;
