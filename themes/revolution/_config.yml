@@ -54,10 +54,10 @@ archive:
 # level: operational（正常）/ maintenance（维护中）/ degraded（部分故障）/ down（故障）
 status:
   enabled: true
-  level: down
-  title: 故障
-  message: 主站服务异常，技术团队正在紧急排查修复中，给您带来不便敬请谅解。
-  updated: 2026-08-14 20:09
+  level: operational
+  title: 正常
+  message: 主站服务已恢复正常，感谢您的耐心等待与支持。
+  updated: 2026-08-14 23:15
 
 # 页脚
 footer:
