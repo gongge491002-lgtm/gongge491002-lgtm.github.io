@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Hexo">
+
+  
+  <title>archive · 革命马列毛维基博客</title>
+
+  <meta name="description" content="革命马列毛维基博客官方公告：服务状态、故障通知、技术更新与维护日志">
+<meta property="og:type" content="article">
+<meta property="og:title" content="革命马列毛维基博客">
+<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:site_name" content="革命马列毛维基博客">
+<meta property="og:description" content="革命马列毛维基博客官方公告：服务状态、故障通知、技术更新与维护日志">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/wiki.svg">
+<meta property="article:author" content="维护团队">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/wiki.svg">
+
+  
+    <link rel="icon" type="image/svg+xml" href="/images/wiki.svg">
+  
+
+  <!-- 防闪烁：在渲染前设置主题 -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      if (!t) t = 'auto';
+      var dark = t === 'dark' || (t === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+    })();
+  </script>
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+  <header class="top-app-bar">
+  <div class="app-bar-inner">
+    <button class="icon-button" id="menu-toggle" aria-label="打开菜单" aria-controls="nav-drawer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <a class="brand" href="/">
+      <img class="brand-logo" src="/images/wiki.svg" alt="" aria-hidden="true">
+      <span class="brand-text">
+        <span class="brand-name">革命马列毛维基博客</span>
+        <span class="brand-suffix">状态与更新</span>
+      </span>
+    </a>
+
+    <nav class="app-bar-nav" aria-label="主导航">
+      
+        <a class="nav-item" href="/">首页</a>
+      
+        <a class="nav-item active" href="/archives/">归档</a>
+      
+        <a class="nav-item" href="/tags/">标签</a>
+      
+        <a class="nav-item" href="/categories/">分类</a>
+      
+        <a class="nav-item" href="/about/">关于</a>
+      
+    </nav>
+
+    <button class="icon-button" id="theme-toggle" aria-label="切换主题">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <div class="app-bar-progress" aria-hidden="true"><div class="app-bar-progress-fill" id="reading-progress"></div></div>
+</header>
+
+
+  <!-- 移动端导航抽屉 -->
+  <div class="scrim" id="nav-scrim" hidden></div>
+<aside class="nav-drawer" id="nav-drawer" aria-label="侧边导航" aria-hidden="true">
+  <div class="nav-drawer-header">
+    <img class="brand-logo" src="/images/wiki.svg" alt="" aria-hidden="true">
+    <span class="brand-text">
+      <span class="brand-name">革命马列毛维基博客</span>
+      <span class="brand-suffix">状态与更新</span>
+    </span>
+  </div>
+  <nav class="nav-drawer-list">
+    
+      <a class="nav-drawer-item" href="/">
+        <span class="nav-drawer-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        首页
+      </a>
+    
+      <a class="nav-drawer-item active" href="/archives/">
+        <span class="nav-drawer-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        归档
+      </a>
+    
+      <a class="nav-drawer-item" href="/tags/">
+        <span class="nav-drawer-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        标签
+      </a>
+    
+      <a class="nav-drawer-item" href="/categories/">
+        <span class="nav-drawer-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        分类
+      </a>
+    
+      <a class="nav-drawer-item" href="/about/">
+        <span class="nav-drawer-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9 9 9M5 10v10h14V10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        关于
+      </a>
+    
+  </nav>
+  
+    <div class="nav-drawer-footer">
+      
+        <a class="social-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      
+    </div>
+  
+</aside>
+
+
+  <main class="app-content" id="main-content">
+    <div class="container">
+  <h1 class="page-heading">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m4 14V9m4 10v-6m4 6V3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    归档
+  </h1>
+
+  <div class="archive-list">
+    
+      <section class="archive-year">
+        <h2 class="archive-year-title">2026</h2>
+        <ul class="archive-items">
+          
+            <li class="archive-item">
+              <time class="archive-item-date" datetime="2026-08-13T16:00:00.000Z">8月14日</time>
+              <a class="archive-item-title" href="/2026/08/13/hello-world/">服务公告：本站上线</a>
+            </li>
+          
+        </ul>
+      </section>
+    
+  </div>
+
+  
+
+</div>
+
+  </main>
+
+  <footer class="app-footer">
+  <div class="footer-inner">
+    
+      <p class="footer-slogan">「全世界无产者，联合起来！」</p>
+    
+    <p class="footer-copyright">
+      © 2026
+      
+      
+      <a href="/">革命马列毛维基博客</a>
+      · 由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动 · Revolution 主题
+    </p>
+    
+      <p class="footer-links">
+        
+          <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>
+        
+          <a href="https://m3.material.io/" target="_blank" rel="noopener">MD3</a>
+        
+      </p>
+    
+  </div>
+</footer>
+
+
+  <!-- 返回顶部 FAB -->
+  <button class="fab" id="fab-top" aria-label="返回顶部" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 20V4M5 11l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  
+<script src="/js/main.js"></script>
+
+</body>
+</html>
